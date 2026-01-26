@@ -1,0 +1,418 @@
+[11:05, 1/19/2026] Edu Salesianas: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoByte • Tecnologia Consciente</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cyan-deep:     #00c2d1;
+      --cyan-medium:   #00e0f0;
+      --cyan-soft:     #4df0ff;
+      --dark-bg:       #0a1115;
+      --dark-900:      #0f1a22;
+      --dark-800:      #15252f;
+      --text-primary:  #f0f9ff;
+      --text-secondary:#a3c9d4;…
+[11:05, 1/19/2026] Edu Salesianas: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoByte • Tecnologia Consciente</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cyan-deep:     #00c2d1;
+      --cyan-medium:   #00e0f0;
+      --cyan-soft:     #4df0ff;
+      --dark-bg:       #0a1115;
+      --dark-900:      #0f1a22;
+      --dark-800:      #15252f;
+      --text-primary:  #f0f9ff;
+      --text-secondary:#a3c9d4;
+      --accent-glow:   rgba(0, 194, 209, 0.18);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Subtle animated background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 20% 30%, var(--accent-glow) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(77,240,255,0.08) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: -1;
+      animation: breathe 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes breathe {
+      0%   { opacity: 0.6; transform: scale(1); }
+      100% { opacity: 0.9; transform: scale(1.05); }
+    }
+
+    /* Navigation - Elegant & Minimal */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7vw;
+      background: rgba(10,17,21,0.75);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,194,209,0.12);
+      z-index: 1000;
+      transition: all 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(10,17,21,0.92);
+      height: 80px;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, var(--cyan-deep), var(--cyan-medium));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4.2rem;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      position: relative;
+      transition: color 0.4s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1.5px;
+      bottom: -6px;
+      left: 0;
+      background: var(--cyan-medium);
+      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-primary);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 6vw;
+    }
+
+    .hero-content {
+      max-width: 980px;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(4.2rem, 10vw, 8.8rem);
+      font-weight: 800;
+      line-height: 0.88;
+      letter-spacing: -3px;
+      background: linear-gradient(90deg, #ffffff, var(--cyan-soft), #ffffff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      color: var(--text-secondary);
+      font-weight: 300;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+      letter-spacing: 0.8px;
+    }
+
+    .btn-premium {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      background: transparent;
+      border: 1.5px solid var(--cyan-deep);
+      color: var(--cyan-medium);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0,194,209,0.15), transparent);
+      transition: left 0.7s ease;
+    }
+
+    .btn-premium:hover::before {
+      left: 100%;
+    }
+
+    .btn-premium:hover {
+      color: white;
+      background: rgba(0,194,209,0.12);
+      box-shadow: 0 0 40px rgba(0,194,209,0.25);
+    }
+
+    /* Sections */
+    section {
+      padding: 14vh 7vw;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(3.4rem, 7vw, 6.2rem);
+      font-weight: 800;
+      color: transparent;
+      background: linear-gradient(90deg, var(--cyan-deep), var(--cyan-medium));
+      -webkit-background-clip: text;
+      background-clip: text;
+      margin-bottom: 3.5rem;
+      line-height: 0.9;
+    }
+
+    .section-lead {
+      font-size: 1.35rem;
+      color: var(--text-secondary);
+      max-width: 780px;
+      margin-bottom: 4rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* Cards - Glassmorphism elegant */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 3rem;
+    }
+
+    .card-glass {
+      background: rgba(21,37,47,0.45);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(0,194,209,0.18);
+      border-radius: 8px;
+      padding: 2.8rem;
+      transition: all 0.5s ease;
+    }
+
+    .card-glass:hover {
+      transform: translateY(-12px);
+      border-color: var(--cyan-medium);
+      box-shadow: 0 20px 60px rgba(0,194,209,0.15);
+    }
+
+    .card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--cyan-soft);
+      margin-bottom: 1.3rem;
+    }
+
+    /* List style elegant */
+    .elegant-list {
+      list-style: none;
+      display: grid;
+      gap: 1.3rem;
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+    }
+
+    .elegant-list li {
+      position: relative;
+      padding-left: 2.2rem;
+    }
+
+    .elegant-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--cyan-medium);
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 8vh 7vw 5vh;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      border-top: 1px solid rgba(0,194,209,0.12);
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="logo">EcoByte</div>
+  <div class="nav-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#missao">Missão</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#sustentabilidade">Sustentabilidade</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>EcoByte</h1>
+    <div class="subtitle">Tecnologia de precisão<br>em perfeita sintonia com o futuro do planeta</div>
+    
+    <a href="#produtos" class="btn-premium">Explorar Coleção</a>
+  </div>
+</div>
+
+<section id="sobre">
+  <h2>A Essência</h2>
+  <p class="section-lead">
+    Somos a convergência entre engenharia de ponta e responsabilidade planetária.<br>
+    Criamos máquinas que não apenas performam — elas respeitam.
+  </p>
+</section>
+
+<section id="missao">
+  <h2>Princípios Fundamentais</h2>
+  <div class="cards-grid">
+    <div class="card-glass">
+      <div class="card-title">Missão</div>
+      <p>Desenvolver tecnologia de altíssimo desempenho que minimize o impacto ambiental e inspire uma nova relação entre humanidade e natureza.</p>
+    </div>
+    
+    <div class="card-glass">
+      <div class="card-title">Visão</div>
+      <p>Redefinir a indústria eletrônica como um sistema regenerativo até 2035.</p>
+    </div>
+    
+    <div class="card-glass">
+      <div class="card-title">Valores</div>
+      <ul class="elegant-list">
+        <li>Precisão sem concessões</li>
+        <li>Transparência radical</li>
+        <li>Regeneração como prioridade</li>
+        <li>Elegância funcional</li>
+        <li>Legado positivo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <h2>Linhas de Performance</h2>
+  <p class="section-lead">Três arquiteturas distintas. Uma única filosofia.</p>
+  
+  <div class="cards-grid">
+    <div class="card-glass">
+      <div class="card-title">Nexus</div>
+      <p>Equilíbrio perfeito entre potência silenciosa, eficiência energética extrema e design atemporal para o lar contemporâneo.</p>
+    </div>
+
+    <div class="card-glass">
+      <div class="card-title">Academy</div>
+      <p>Construção robusta, modularidade máxima e ciclo de vida estendido — projetado para instituições que pensam em gerações.</p>
+    </div>
+
+    <div class="card-glass">
+      <div class="card-title">Void</div>
+      <p>Desempenho profissional absoluto aliado à consciência ecológica — para organizações que lideram o futuro com integridade.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sustentabilidade">
+  <h2>Compromisso Regenerativo</h2>
+  <div class="card-glass" style="max-width: 960px; margin: 0 auto;">
+    <ul class="elegant-list" style="font-size: 1.2rem;">
+      <li>87–94% de materiais reciclados, bio-base ou renováveis certificados</li>
+      <li>Arquitetura 100% modular — cada componente substituível</li>
+      <li>Logística reversa global com rastreamento blockchain</li>
+      <li>Compensação de carbono certificada + projetos de reflorestamento ativo</li>
+      <li>Redução média de 48% no consumo energético vs. padrão da indústria</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>EcoByte — Tecnologia que transcende o presente • 2026–∞</p>
+</footer>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 100) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script>
+</body>
+</html>
